@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Markdown Editor Pro</h1>
+        <div class="controls">
+            <div class="control-group">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="forest">Forest</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="font-size">Font Size:</label>
+                <select id="font-size">
+                    <option value="14px">Small</option>
+                    <option value="16px" selected>Normal</option>
+                    <option value="18px">Large</option>
+                </select>
+            </div>
+            <button id="export-btn" class="btn primary">Export to HTML</button>
+            <button id="open-btn" class="btn">Open File</button>
+            <button id="save-btn" class="btn">Save As</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="panel editor-panel">
+            <div class="panel-header">
+                <h2>Editor</h2>
+                <div class="status-bar">
+                    <span id="char-count">0 characters</span>
+                    <span id="word-count">0 words</span>
+                </div>
+            </div>
+            <textarea id="editor" placeholder="Type markdown here..."></textarea>
+        </section>
+        
+        <section class="panel preview-panel">
+            <div class="panel-header">
+                <h2>Preview</h2>
+                <div class="panel-actions">
+                    <button id="code-view-btn" class="btn">Code View</button>
+                </div>
+            </div>
+            <div id="preview" class="preview"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Markdown Editor Pro • Free • Open Source • No APIs • 100% Client-Side</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
